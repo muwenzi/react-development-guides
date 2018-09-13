@@ -2,9 +2,9 @@
 
 * [React 开发指南](README.md)
 * [说明](shuo-ming.md)
-* [1. App 总览](1.-app-zong-lan/README.md)
+* [1. 项目总览](1.-app-zong-lan/README.md)
   * [目录结构](1.-app-zong-lan/mu-lu-jie-gou.md)
-  * [文件和文件夹说明](1.-app-zong-lan/wen-jian-he-wen-jian-jia-shuo-ming.md)
+  * [命名规范](1.-app-zong-lan/wen-jian-he-wen-jian-jia-shuo-ming.md)
 * [2. React 基础](2.-react-ji-chu/README.md)
   * [JSX](2.-react-ji-chu/jsx.md)
   * [生命周期](2.-react-ji-chu/sheng-ming-zhou-qi.md)

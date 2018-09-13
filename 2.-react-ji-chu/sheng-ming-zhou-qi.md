@@ -25,5 +25,3 @@ React v16.3，引入了两个新的生命周期函数：
 
 ![React v16.3 &#x751F;&#x547D;&#x5468;&#x671F;&#x56FE;](../.gitbook/assets/ping-mu-kuai-zhao-20180619-xia-wu-5.32.22.png)
 
-
-

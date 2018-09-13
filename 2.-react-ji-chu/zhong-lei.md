@@ -3,7 +3,7 @@
 ## 类与函数式组件
 
 | **对比点** | **class** | **function（函数式）** |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | state | 可选 | 无状态 |
 | props | 有 | 有 |
 | 生命周期 | 有 | 无 |
@@ -49,7 +49,7 @@
 {% endhint %}
 
 | **对比点** | **controlled** | **uncontrolled（反模式）** |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | 特征 | 有value/checked属性 | 无value/checked属性 |
 | 优点 | 便于对输入的value作处理 | 可以不用绑定change事件 |
 | 缺点 | 最好绑定change事件，有性能损耗 | 不受props/state控制 |
@@ -74,6 +74,4 @@
 ```jsx
 <input type="text" value={this.state.name || ''} onChange={this.handleChange.bind(this)} />
 ```
-
-
 

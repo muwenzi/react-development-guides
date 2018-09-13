@@ -38,7 +38,7 @@ const mapStateToProps = state => ({
 });
 const mapDispatchToProps = dispatch => ({
   deleteDiscount(page, lineId) {
-	dispatch(asyncAction.deleteDiscount(page, lineId));
+    dispatch(asyncAction.deleteDiscount(page, lineId));
   }
 });
 const mergeProps = (stateProps, dispatchProps, ownProps) => {
@@ -54,9 +54,7 @@ export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Table);
 {% endhint %}
 
 * **options: object** 里面主要关注 pure。
-
-1. _\[pure = true\] \(Boolean\)_: 如果为 true，connector 将执行 shouldComponentUpdate 并且浅对比 mergeProps 的结果，避免不必要的更新，前提是当前组件是一个“**纯**”组件，它不依赖于任何的输入或 state 而只依赖于 props 和 Redux store 的 state。**默认值为 true**。 
-2. _\[withRef = false\] \(Boolean\)_: 如果为 true，connector 会保存一个对被被包含的组件实例的引用，该引用通过 `getWrappedInstance()` 方法获得。**默认值为 false**。
-
+* _\[pure = true\] \(Boolean\)_: 如果为 true，connector 将执行 shouldComponentUpdate 并且浅对比 mergeProps 的结果，避免不必要的更新，前提是当前组件是一个“**纯**”组件，它不依赖于任何的输入或 state 而只依赖于 props 和 Redux store 的 state。**默认值为 true**。
+* _\[withRef = false\] \(Boolean\)_: 如果为 true，connector 会保存一个对被被包含的组件实例的引用，该引用通过 `getWrappedInstance()` 方法获得。**默认值为 false**。
 * **Component** 就是要被连接的 React 组件。
 

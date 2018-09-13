@@ -72,7 +72,7 @@ exports[`should renders correctly 2`] = `
 
 > 如何更新快照？
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image-1.png)
 
 详细参考：[https://jestjs.io/docs/zh-Hans/snapshot-testing](https://jestjs.io/docs/zh-Hans/snapshot-testing)
 
@@ -144,7 +144,6 @@ it('should render ButtonWithIcon correctly', () => {
     'Hello Jest!'
   ])
 })
-
 ```
 
 ### Enzyme 组件测试

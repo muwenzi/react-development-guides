@@ -10,14 +10,14 @@ sync action 的单元测试相对比较简单，主要测试 action creator 的�
 
 ```javascript
 describe('#action# setDiscountType', () => {
-	const lineId = '456adc81-7b5a-4863-95b1-b43d1539a233';
-	const discountType = 0;
-	it('should return setDiscountType action creator correctly', () => {
-		const action = setDiscountType(lineId, discountType);
-		expect(action).to.have.property('type', actionTypes.LINES_SET_REQUEST);
-		expect(action).to.have.property('lineId', lineId);
-		expect(action).to.have.property('discountType', discountType);
-	});
+    const lineId = '456adc81-7b5a-4863-95b1-b43d1539a233';
+    const discountType = 0;
+    it('should return setDiscountType action creator correctly', () => {
+        const action = setDiscountType(lineId, discountType);
+        expect(action).to.have.property('type', actionTypes.LINES_SET_REQUEST);
+        expect(action).to.have.property('lineId', lineId);
+        expect(action).to.have.property('discountType', discountType);
+    });
 }
 ```
 
@@ -27,31 +27,31 @@ async action 的单元测试相对比较复杂，结合项目中的 redux-thunk 
 
 ```javascript
 describe('#action# setLinesData', () => {
-	const dispatch = jest.fn();
-	const lineId = '456adc81-7b5a-4863-95b1-b43d1539a233';
-	const lineData = {...};
-	const getState = jest.fn().mockReturnValue(Immutable({...}));
+    const dispatch = jest.fn();
+    const lineId = '456adc81-7b5a-4863-95b1-b43d1539a233';
+    const lineData = {...};
+    const getState = jest.fn().mockReturnValue(Immutable({...}));
 
-	afterEach(jest.clearAllMocks);
+    afterEach(jest.clearAllMocks);
 
-	it('should set lines data success', done => {
-		const utils = {
-			ProformaService: {
-				setLinesData: jest.fn().mockReturnValue(Promise.resolve())
-			}
-		};
-		setLinesData(lineId, false, lineData)(dispatch, getState, utils)
-			.then(() => {
-				expect(dispatch).toHaveBeenCalledWith({
-					type: actionTypes.LINES_SET_REQUEST
-				});
-				expect(dispatch).toHaveBeenCalledWith({
-					type: actionTypes.LINES_SET_SUCCESS
-				});
-				done();
-			})
-			.catch(done.fail);
-	});
+    it('should set lines data success', done => {
+        const utils = {
+            ProformaService: {
+                setLinesData: jest.fn().mockReturnValue(Promise.resolve())
+            }
+        };
+        setLinesData(lineId, false, lineData)(dispatch, getState, utils)
+            .then(() => {
+                expect(dispatch).toHaveBeenCalledWith({
+                    type: actionTypes.LINES_SET_REQUEST
+                });
+                expect(dispatch).toHaveBeenCalledWith({
+                    type: actionTypes.LINES_SET_SUCCESS
+                });
+                done();
+            })
+            .catch(done.fail);
+    });
 }
 ```
 

@@ -1,56 +1,75 @@
-# 文件和文件夹说明
+# 命名规范
 
-### libs
+## 文件夹命名
 
-放app里面用到的一些公共方法/库
-
-### AppName.browser.js
-
-App的入口文件，主要包括创建Store、初始化状态、挂载react app，连接状态树等。
-
-### AppName.server.js
-
-可以对后端的多个请求做二次封装处理，也可以做一些跨域处理等。
-
-### AppName.webpack.less
-
-app样式的入口文件
+{% hint style="success" %}
+**推荐**：React 组件的文件夹命名都是 **大驼峰 + 单数**，其他文件夹都是 **小驼峰 + 复数**。
+{% endhint %}
 
 示例：
 
-```javascript
-@import '~runtime'; 
-@import url('./src/icons/icons.less');
-
-.App {
-  @import url('src/ui/Button/index.less');
-  @import url('src/ui/ButtonGroup/index.less');
-  @import url('src/components/App/index.less');
-  @import url('src/components/Footer/index.less');
-}
+```text
+Header
+Button
+components
+widgets
+utils
+states
+apis
+libs
 ```
 
-### Layout
+## 文件命名
 
-配合 `manualLayout` 属性为 `true` 的时候使用，是非常基本的和App iframe有关的布局，如果为`false`，App iframe里面会自动加上 、 等这些基础布局。
+{% hint style="success" %}
+**推荐**：文件命名都是 **小驼峰**，单复数看情形。
+{% endhint %}
+
+{% hint style="success" %}
+**推荐**：大部分 js 文件需要加上 **类型后缀**，以便快速搜索文件和在 IDE 多个标签中能快速区分。
+{% endhint %}
+
+类型后缀包括：
+
+```text
+xxx.presentational.js
+xxx.container.js
+xxx.widget.js
+xxx.action.js
+xxx.middleware.js
+xxx.reducer.js
+xxx.selector.js
+xxx.api.js
+xxx.util.js
+```
 
 示例：
 
-```jsx
-const Layout = props =>
-	<div>
-		<header data-ts="TopBar" />
-		<Spinner show={props.show} blocking={props.blocking} message={props.message} />
-		<main data-ts="Main">
-			<div data-ts="MainContent">
-				<StickyContainer className="ts-main" style={{ top: 0 }}>
-					{props.children}
-				</StickyContainer>
-			</div>
-		</main>
-	</div>; 
+```text
+index.js
+router.js
+creatDocument.action.js
+errorLog.middleware.js
 ```
 
-### App
+## 方法/变量命名
 
-主要是根据不同的Router加载不同的components。
+{% hint style="success" %}
+**推荐**：方法名都是 **小驼峰**，单复数看情形。
+{% endhint %}
+
+{% hint style="success" %}
+**推荐**：变量名除常量外都是 **小驼峰**，单复数看情形。
+{% endhint %}
+
+{% hint style="success" %}
+**推荐**：常量名都是 **全大写字母 + 下划线分隔**，单复数看情形。
+{% endhint %}
+
+示例：
+
+```text
+UNIFIED_STATES
+LINES_SET_FILTER
+```
+

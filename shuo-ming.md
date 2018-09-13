@@ -20,5 +20,3 @@
 **Tips**
 {% endhint %}
 
-
-

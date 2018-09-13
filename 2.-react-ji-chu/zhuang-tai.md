@@ -19,9 +19,9 @@
 
 ## prop-types
 
-prop-types用来检查组件的属性，当你给属性传递了无效值时，JavsScript 控制台将会打印警告。出于性能原因，prop-types 只在**开发模式**下进行检查。 
+prop-types用来检查组件的属性，当你给属性传递了无效值时，JavsScript 控制台将会打印警告。出于性能原因，prop-types 只在**开发模式**下进行检查。
 
-```
+```text
 prop-types // 包名
 propTypes // 组件属性名
 PropTypes // 类名
@@ -35,7 +35,7 @@ PropTypes // 类名
 
 `defaultProps` 用来确保 `this.props.name` 在父组件没有特别指定的情况下，有一个初始值。类型检查发生在 `defaultProps` 赋值之后，所以类型检查也会应用在 `defaultProps` 上面。
 
-## setState 
+## setState
 
 ### 哪些周期可以使用？
 

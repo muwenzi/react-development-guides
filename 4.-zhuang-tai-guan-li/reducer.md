@@ -51,5 +51,3 @@ Immutable 有两个库：
 **推荐**：Reducer 初始化 initialState 时使用 **immutable-js** 时建议用 Immutable.Map 方法而不是 fromJS 方法，效率更高。
 {% endhint %}
 
-
-

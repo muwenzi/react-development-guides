@@ -28,6 +28,5 @@ Chrome浏览器内：
 
 ## React 15 性能分析
 
-低版本的 React 请参考官方文档：[react-addons-perf](https://reactjs.org/docs/perf.html)  
-
+低版本的 React 请参考官方文档：[react-addons-perf](https://reactjs.org/docs/perf.html)
 

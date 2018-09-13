@@ -9,7 +9,7 @@ mapStateToProps 中从状态树获取数据的方法也被叫做 selector，它�
 {% endhint %}
 
 {% hint style="success" %}
-**推荐**：在所有地方使用 selector，即使是在一个细小的位置。这样的好处是你很容易在多个  selector 中发现重复的逻辑，抽出共用的方法。即使是从状态树上直接获取的状态（非推导状态），如果有多个地方在使用，也应当放在 selector 中，避免重复逻辑。
+**推荐**：在所有地方使用 selector，即使是在一个细小的位置。这样的好处是你很容易在多个 selector 中发现重复的逻辑，抽出共用的方法。即使是从状态树上直接获取的状态（非推导状态），如果有多个地方在使用，也应当放在 selector 中，避免重复逻辑。
 {% endhint %}
 
 ## reselect 计算缓存
@@ -28,17 +28,17 @@ const getTaxSubtotal = proforma => get(proforma, 'ubl.TaxTotal[0].TaxSubtotal');
 const getTaxAmount = proforma => get(proforma, 'ubl.TaxTotal[0].TaxAmount');
 
 export const getTaxTotal = createSelector(
-	[getTaxSubtotal, getTaxAmount],
-	(taxSubtotal, taxAmount) => ({
-		taxAmount,
-		taxSubtotal:
-			taxSubtotal &&
-			taxSubtotal.map(item => ({
-				taxableAmount: get(item, 'TaxableAmount.value'),
-				taxScheme: get(item, 'TaxCategory.TaxScheme.Name.value'),
-				taxAmount: get(item, 'TaxAmount.value')
-			}))
-	})
+    [getTaxSubtotal, getTaxAmount],
+    (taxSubtotal, taxAmount) => ({
+        taxAmount,
+        taxSubtotal:
+            taxSubtotal &&
+            taxSubtotal.map(item => ({
+                taxableAmount: get(item, 'TaxableAmount.value'),
+                taxScheme: get(item, 'TaxCategory.TaxScheme.Name.value'),
+                taxAmount: get(item, 'TaxAmount.value')
+            }))
+    })
 );
 ```
 

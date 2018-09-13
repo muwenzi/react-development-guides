@@ -31,7 +31,7 @@ react-router 去匹配的只是 '/my-projects/one' 这一部分。
 ## 匹配路径
 
 `path-to-regexp`包用来决定 route 元素的 path 参数与当前 location 是否匹配。它将路径字符串编译成正则表达式，并与当前 location 的路径名进行匹配比较。除了上面的例子外，路径字符串有更多高级的选项，详见 path-to-regexp 文档。  
-当路由地址匹配成功后，会创建一个含有以下属性的 `match` __对象：
+当路由地址匹配成功后，会创建一个含有以下属性的 `match` \_\_对象：
 
 * url ：与当前 location 路径名所匹配部分
 * path ：路由的地址

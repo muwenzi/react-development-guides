@@ -98,7 +98,7 @@ const element = {
 
 ## 条件渲染
 
-条件渲染大体有两种，一种是 JS 写法，它在 render 方法里面写多个 return 语句，那么你可以将逻辑放在 JS 中判断，和一般的 JS 中的 if-else 语句写法无异。另一种就是 JSX 写法，render 方法里面只有一个 return 语句，可以通过用 `单大括号 {}` ****包裹代码在 JSX 中嵌入任何 [JS 表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)，这种相对更为简洁。当然也可以采用两种组合式的写法。
+条件渲染大体有两种，一种是 JS 写法，它在 render 方法里面写多个 return 语句，那么你可以将逻辑放在 JS 中判断，和一般的 JS 中的 if-else 语句写法无异。另一种就是 JSX 写法，render 方法里面只有一个 return 语句，可以通过用 `单大括号 {}` _\*\*_包裹代码在 JSX 中嵌入任何 [JS 表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)，这种相对更为简洁。当然也可以采用两种组合式的写法。
 
 ### JS 写法
 
@@ -173,7 +173,7 @@ const renderListItems = props => {
 
 写动态子组件时，如果没有给动态子项添加 key prop，则会报一个警告：
 
-> Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of 'renderListItems'. See https://fb.me/react-warning-keys for more information.
+> Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of 'renderListItems'. See [https://fb.me/react-warning-keys](https://fb.me/react-warning-keys) for more information.
 
 这个警告指的是，如果每一个组件是一个数组或迭代器的话，那么必须有一个唯一的 key prop。那么这个key prop 是做什么的？
 
