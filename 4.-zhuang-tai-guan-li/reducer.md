@@ -34,7 +34,7 @@ map2.get('b'); // 50
 
 Immutable 通过**结构共享**来解决的数据拷贝时的性能问题，数据被 set 的时候，Immutable 会只 clone 它的父级别以上的部分，其他保持不变，这样大家可以共享同样的部分，可以大大提高性能。如图所示：
 
-![Immutable &#x6570;&#x636E;&#x66F4;&#x65B0;&#x673A;&#x5236;&#x52A8;&#x6001;&#x6548;&#x679C;&#x56FE;](https://lh4.googleusercontent.com/Umudo8RvVYKjVwXybvKNnsWIVoBweZemN7-XwJQVdOLoyzGVGlK_ulBx0omH8bEtKFmzjPtmgSMc9cB1ys1_dhZOFraynIj8Dkj8YXBYLk679J5_iMIpA9BRcPDCitLRZyfd1Lg)
+![Immutable &#x6570;&#x636E;&#x66F4;&#x65B0;&#x673A;&#x5236;&#x52A8;&#x6001;&#x6548;&#x679C;&#x56FE;](../.gitbook/assets/immutable.gif)
 
 最后橙色的节点是结构共享的部分。
 

@@ -9,5 +9,5 @@ Redux 的一个重要思想是将组件主要分为 **container（容器型） �
 
 一个完整 React App 的组件树，根节点即 mountNode，叶子节点应该是 presentational 组件或 ui 组件，中间的节点是 container 组件，主要用与传递和监听数据，作为一个数据的中间容器。
 
-![Redux &#x7EC4;&#x4EF6;&#x6811;](https://lh4.googleusercontent.com/ivPf3UAjXj35PTHKFvCSJz8rYsq6AmP1I33hZbAUvUeMHcnRCNhHQ_mTMq_XrEA76W09I7REnu6qHEL1SOV1WuhtPPhF_aIdetNS4rcWx1fG5RiRoE3sBVAAVNY3pMFD4BcAJjw)
+![Redux &#x7EC4;&#x4EF6;&#x6811;](../../.gitbook/assets/pasted-image-0.png)
 

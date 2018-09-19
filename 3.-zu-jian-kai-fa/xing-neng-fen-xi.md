@@ -6,7 +6,7 @@
 
 示例：
 
-![](https://lh4.googleusercontent.com/_u3w1Ma2rTuILVlWSjXVU2EkU5w0ghfWH36LzkzbhrZVi7XlkApI0gduAtMqlX8CSPeae7lLmmjNZQx5RTyxAY0A6METO_WJgQOcybfrrkaIxZVfCLLYBkHeojKu8ZrT1OiJoJ0)
+![](../.gitbook/assets/performancanalysis.png)
 
 Chrome浏览器内：
 
