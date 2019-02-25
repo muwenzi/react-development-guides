@@ -41,6 +41,7 @@ xxx.reducer.js
 xxx.selector.js
 xxx.api.js
 xxx.util.js
+xxx.model.js
 ```
 
 示例：

@@ -42,7 +42,7 @@ this.refs.update.addEventListener('click',e => {
 
 Q：为什么有时候还需要原生事件？
 
-A：react 的 app 一般是挂在 body 下面某个div 结点上，如果我想将事件绑定在 body 上（比如监听 body 的滚动事件，window 的 resize 事件）就需要用原生事件。实际上，react 合成事件只是原生 DOM 事件的一个子集，它仅仅实现了 DOM Level 3 的事件接口，并且统一了浏览器的兼容问题，有些事件 React 并没有实现。
+A：react 的 app 一般是挂在 body 下面某个div 结点上，如果我想将事件绑定在 body 上（比如监听 body 的滚动事件，window 的 resize 事件）就需要用原生事件。实际上，react 合成事件只是原生 DOM 事件的一个子集，它仅仅实现了 [DOM Level 3](https://www.w3.org/TR/DOM-Level-3-Events/) 的事件接口，并且统一了浏览器的兼容问题，有些事件 React 并没有实现。
 
 Q：在什么生命周期才可以绑定原生事件？
 

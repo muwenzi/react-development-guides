@@ -1,6 +1,6 @@
 # 5. 路由管理
 
-{% embed data="{\"url\":\"http://reacttraining.cn/web/example/basic\",\"type\":\"link\",\"title\":\"React Router: 用于 React.js 的声明式路由库\",\"description\":\"Learn once, Route Anywhere\",\"icon\":{\"type\":\"icon\",\"url\":\"http://reacttraining.cn/apple-touch-icon.png\",\"width\":180,\"height\":180,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"http://reacttraining.cn/react-square.png\",\"width\":562,\"height\":562,\"aspectRatio\":1}}" %}
+{% embed url="http://reacttraining.cn/web/example/basic" %}
 
 React Router被拆分成三个包：`react-router`,`react-router-dom`和`react-router-native`。`react-router`提供核心的路由组件与函数。其余两个则提供运行环境（即浏览器与react-native）所需的特定组件。
 

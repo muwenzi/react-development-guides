@@ -1,5 +1,7 @@
 # 目录结构
 
+## 原始的 Redux 项目目录结构
+
 ```text
 Project/App
 ├── index.js                                      # 入口文件，包括App挂载，创建store
@@ -81,5 +83,7 @@ Project/App
         └── utilTwo.util.test.js                          
 ```
 
+## [Rematch](https://github.com/rematch/rematch) 封装的 Redux 项目结构
 
+// TODO
 
