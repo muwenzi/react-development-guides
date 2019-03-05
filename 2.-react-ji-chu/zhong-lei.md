@@ -36,10 +36,10 @@
 受控组件和非受控组件主要用在表单的处理当中。controll 指的是对 **value/checked**\(单选框和复选框\) 属性的控制。以 input 为例，如果绑定了 value 属性则为受控组件，[demo](https://jsbin.com/wehazujeli/edit?js,console,output)：
 
 ```jsx
-<input type="text" value="this.state.value" /> // 受控组件
-<input type="text" value="this.state.value" onChange={::this.handleChange} /> // 受控组件
-<input type="text" ref="myInput" defaultValue="this.state.value" /> // 非受控组件
-<input type="text" ref="myInput" defaultValue="this.state.value" onChange={::this.handleChange} /> // 非受控组件
+<input type="text" value={this.state.value} /> // 受控组件
+<input type="text" value={this.state.value} onChange={::this.handleChange} /> // 受控组件
+<input type="text" ref={n => this.myInput = n} defaultValue={this.state.value} /> // 非受控组件
+<input type="text" ref={n => this.myInput = n} defaultValue={this.state.value} onChange={::this.handleChange} /> // 非受控组件
 ```
 
 受控组件将value和state进行了绑定，可以通过 react 的生命周期很方便地达到对value的控制，state相应值的变化也会影响到value的变化，使得应用整体的状态更加可控，所以说它是受控的。由于非受控组件没有 value 属性，所以要想控制输入框的内容不是那么方便和“原生自然“，当然通过 ref 反模式也可以达到相同的效果。

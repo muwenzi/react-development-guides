@@ -4,86 +4,155 @@
 
 ```text
 Project/App
-├── index.js                                      # 入口文件，包括App挂载，创建store
+├── index.js                                      # 入口文件
 ├── router.js                                     # App路由
-├── manifest.json                                 # App的相关配置
-├── components                                    # 业务型组件
+├── store.js                                      # 生成Store
+├── <manifest.json>                               # App的相关配置
+├── components                                    # 展示型组件
 │   └── Header                                    # 以<Header>组件为例
-│       ├── Header.presentational.js              # 展示型组件
-│       ├── Header.contianer.js                   # 容器型组件
-│       ├── Header.less                           # 样式文件
+│       ├── index.js                            
+│       ├── index.less                            # 样式文件
 │       └── __tests__                             # 测试
 │           ├── __snapshots__                     # 快照测试文件夹，自动生成
-│           ├── Header.presentational.test.js     # 展示型组件测试
-│           └── Header.contianer.test.js          # 容器型组件测试 
-├── widgets                                       # 小控件，自定义的基础ui组件
+│           └── index.test.js                     # 展示型组件测试 
+├── ui                                            # 自定义的基础ui组件
 │   └── Button                                    # 以<Button>组件为例
-│       ├── Button.widget.js                       
-│       ├── Button.widget.less                     
+│       ├── index.js                       
+│       ├── index.less                     
 │       └── __tests__                              
 │           ├── __snapshots__                      
-│           └── Button.widget.test.js                
+│           └── index.test.js                
 ├── states                                        # 状态管理相关，主要是Redux
-│   ├── actions                                  
-│   │   ├── sync                                  # 同步action
-│   │   │   ├── actionOne.action.js              
-│   │   │   ├── actionTwo.action.js              
-│   │   │   ├── index.js                          # 将所有同步action聚合
-│   │   │   └── __tests__                          
-│   │   │       ├── actionOne.action.test.js     
-│   │   │       └── actionTwo.action.test.js      
-│   │   └── async                                 # 异步action
-│   │       ├── actionOne.action.js               
-│   │       ├── actionTwo.action.js               
-│   │       ├── index.js                          # 将所有异步action聚合
-│   │       └── __tests__                          
-│   │           ├── actionOne.action.test.js      
-│   │           └── actionTwo.action.test.js      
+│   ├── containers                                # 容器型组件
+│   │   ├── Header.js
+│   │   ├── index.js                              # 将所有container聚合
+│   │   └── __tests__                             
+│   │       └── Header.test.js   
 │   ├── middlewares                               # 中间件
-│   │   ├── middlewareOne.middleware.js              
-│   │   ├── middlewareTwo.middleware.js              
+│   │   ├── middlewareOne.js              
+│   │   ├── middlewareTwo.js              
 │   │   ├── index.js                              # 将所有中间件聚合
 │   │   └── __tests__                              
-│   │       ├── middlewareOne.middleware.test.js     
-│   │       └── middlewareTwo.middleware.test.js      
-│   ├── reducers                                    
-│   │   ├── reducerOne.reducer.js              
-│   │   ├── reducerTwo.reducer.js              
-│   │   ├── index.js                              # 将所有异步reducer聚合
-│   │   └── __tests__                              
-│   │       ├── reducerOne.reducer.test.js     
-│   │       └── reducerTwo.reducer.test.js      
+│   │       ├── middlewareOne.test.js     
+│   │       └── middlewareTwo.test.js    
 │   ├── selectors                                                           
-│   │   ├── selectorOne.selector.js              
-│   │   ├── selectorTwo.selector.js              
+│   │   ├── selectorOne.js              
+│   │   ├── selectorTwo.js              
 │   │   ├── index.js                              # 将所有异步selector聚合
 │   │   └── __tests__                              
-│   │       ├── selectorOne.selector.test.js     
-│   │       └── selectorTwo.selector.test.js     
+│   │       ├── selectorOne.test.js     
+│   │       └── selectorTwo.test.js      
+│   ├── actions                                  
+│   │   ├── sync                                  # 同步action
+│   │   │   ├── actionOne.js              
+│   │   │   ├── actionTwo.js              
+│   │   │   ├── index.js                          # 将所有同步action聚合
+│   │   │   └── __tests__                          
+│   │   │       ├── actionOne.test.js     
+│   │   │       └── actionTwo.test.js      
+│   │   └── async                                 # 异步action
+│   │       ├── actionOne.js               
+│   │       ├── actionTwo.js               
+│   │       ├── index.js                          # 将所有异步action聚合
+│   │       └── __tests__                          
+│   │           ├── actionOne.test.js      
+│   │           └── actionTwo.test.js       
+│   ├── reducers                                    
+│   │   ├── reducerOne.js              
+│   │   ├── reducerTwo.js              
+│   │   ├── index.js                              # 将所有异步reducer聚合
+│   │   └── __tests__                              
+│   │       ├── reducerOne.test.js     
+│   │       └── reducerTwo.test.js      
 │   ├── types                             
-│   │   ├── typeOne.type.js              
-│   │   ├── typeTwo.type.js              
+│   │   ├── typeOne.js              
+│   │   ├── typeTwo.js              
 │   │   ├── index.js                              # 将所有异步type聚合
 │   │   └── __tests__                              
-│   │       ├── typeOne.type.test.js     
-│   │       └── typeTwo.type.test.js  
+│   │       ├── typeOne.test.js     
+│   │       └── typeTwo.test.js  
 ├── apis                                           
-│   ├── apiOne.api.js              
-│   ├── apiTwo.api.js              
+│   ├── apiOne.js              
+│   ├── apiTwo.js              
 │   ├── index.js                                  # 将所有api聚合
 │   └── __tests__                              
-│       ├── apiOne.api.test.js     
-│       └── apiTwo.api.test.js     
+│       ├── apiOne.test.js     
+│       └── apiTwo.test.js     
 └── utils                                         # 一些公共的工具类文件
-    ├── utilOne.util.js              
-    ├── utilTwo.util.js              
+    ├── utilOne.js              
+    ├── utilTwo.js              
     ├── index.js                                  # 将所有util聚合
     └── __tests__                              
-        ├── utilOne.util.test.js     
-        └── utilTwo.util.test.js                          
+        ├── utilOne.test.js     
+        └── utilTwo.test.js        
 ```
 
 ## [Rematch](https://github.com/rematch/rematch) 封装的 Redux 项目结构
 
-// TODO
+在实际开发中，使用原始 Redux 开发时，会发现每加一个新功能就需要定义一堆 `action` , `type` , `reducer` , 非常繁琐，哪怕是一个非常小的功能。这时候就可以使用 Rematch 去改造 Redux 项目。由于 Redux 和 Rematch 的 model 定义可以共存，在定义项目的结构的时候可以调整为如下方式：
+
+```text
+Project/App
+├── index.js                                      # 入口文件
+├── router.js                                     # App路由
+├── store.js                                      # 生成Store
+├── <manifest.json>                               # App的相关配置
+├── components                                    # 展示型组件
+│   └── Header                                    # 以<Header>组件为例
+│       ├── index.js                            
+│       ├── index.less                            # 样式文件
+│       └── __tests__                             # 测试
+│           ├── __snapshots__                     # 快照测试文件夹，自动生成
+│           └── index.test.js                     # 展示型组件测试 
+├── ui                                            # 自定义的基础ui组件
+│   └── Button                                    # 以<Button>组件为例
+│       ├── index.js                       
+│       ├── index.less                     
+│       └── __tests__                              
+│           ├── __snapshots__                      
+│           └── index.test.js                
+├── states                                        # 状态管理相关
+│   ├── containers                                # 容器型组件
+│   │   ├── Header.js
+│   │   ├── index.js                              # 将所有container聚合
+│   │   └── __tests__                             
+│   │       └── Header.test.js   
+│   ├── middlewares                               # 中间件
+│   │   ├── middlewareOne.js              
+│   │   ├── middlewareTwo.js              
+│   │   ├── index.js                              # 将所有中间件聚合
+│   │   └── __tests__                              
+│   │       ├── middlewareOne.test.js     
+│   │       └── middlewareTwo.test.js      
+│   ├── selectors                                                           
+│   │   ├── selectorOne.js              
+│   │   ├── selectorTwo.js              
+│   │   ├── index.js                              # 将所有异步selector聚合
+│   │   └── __tests__                              
+│   │       ├── selectorOne.test.js     
+│   │       └── selectorTwo.test.js      
+│   ├── models                                    # model层，替代原始Redux
+│   │   ├── modelOne.js              
+│   │   ├── modelTwo.js              
+│   │   ├── index.js                              # 将所有model聚合
+│   │   └── __tests__                              
+│   │       ├── modelOne.test.js     
+│   │       └── modelTwo.test.js  
+├── apis                                           
+│   ├── apiOne.js              
+│   ├── apiTwo.js              
+│   ├── index.js                                  # 将所有api聚合
+│   └── __tests__                              
+│       ├── apiOne.test.js     
+│       └── apiTwo.test.js     
+└── utils                                         # 一些公共的工具类文件
+    ├── utilOne.js              
+    ├── utilTwo.js              
+    ├── index.js                                  # 将所有util聚合
+    └── __tests__                              
+        ├── utilOne.test.js     
+        └── utilTwo.test.js        
+```
+
+Rematch 的使用方式，以及如何和 Redux 项目进行兼容，详细见其文档教程：[https://rematch.gitbook.io/handbook/](https://rematch.gitbook.io/handbook/)
 

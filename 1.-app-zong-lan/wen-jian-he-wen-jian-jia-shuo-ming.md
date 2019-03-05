@@ -25,34 +25,6 @@ libs
 **推荐**：文件命名都是 **小驼峰**，单复数看情形。
 {% endhint %}
 
-{% hint style="success" %}
-**推荐**：大部分 js 文件需要加上 **类型后缀**，以便快速搜索文件和在 IDE 多个标签中能快速区分。
-{% endhint %}
-
-类型后缀包括：
-
-```text
-xxx.presentational.js
-xxx.container.js
-xxx.widget.js
-xxx.action.js
-xxx.middleware.js
-xxx.reducer.js
-xxx.selector.js
-xxx.api.js
-xxx.util.js
-xxx.model.js
-```
-
-示例：
-
-```text
-index.js
-router.js
-creatDocument.action.js
-errorLog.middleware.js
-```
-
 ## 方法/变量命名
 
 {% hint style="success" %}
