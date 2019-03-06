@@ -29,6 +29,7 @@
   * [Action](4.-zhuang-tai-guan-li/action.md)
   * [Selector](4.-zhuang-tai-guan-li/selector.md)
   * [Middleware](4.-zhuang-tai-guan-li/middleware.md)
+  * [Model](4.-zhuang-tai-guan-li/model.md)
 * [5. 路由管理](5.-lu-you-guan-li/README.md)
   * [Router](5.-lu-you-guan-li/lu-you-ji-zu-jian.md)
   * [Route](5.-lu-you-guan-li/route.md)
