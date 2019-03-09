@@ -147,6 +147,10 @@ const Article = () => (
 )
 ```
 
+{% hint style="warning" %}
+**注意**：Switch 里面直接要嵌套 Route，否则在路由跳转的时候会出现一些意想不到的情况。
+{% endhint %}
+
 ## 路径参数
 
 有时路径名中存在我们需要获取的参数。例如，我们需要获取文章的id。我们可以向 &lt;Route&gt; 中添加 path 参数。
