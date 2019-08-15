@@ -152,9 +152,9 @@ it('should render ButtonWithIcon correctly', () => {
 
 Enzyme 提供 3 种不同的方式来测试组件：
 
-* \*\*\*\*[**shallow**](http://airbnb.io/enzyme/docs/api/shallow.html)：推荐的方式，浅渲染，只会渲染本地组件内容（只渲染不包含 children 的组件），引用的外部组件不会渲染，提供更好的隔离性。
-* \*\*\*\*[**render**](http://airbnb.io/enzyme/docs/api/render.html)：如果 shallow 不能满足，才会使用它，能够渲染所有的子组件。基于 Cheerio 来模拟 DOM 环境（Cheerio 是类似 JSDOM 的另一框架）。
-* \*\*\*\*[**mount**](http://airbnb.io/enzyme/docs/api/mount.html)：类似 render，会做全渲染，对测试生命周期非常有用，能够访问到组件的生命周期方法，比如 `componentDidUpdate` 等。一般用于集成测试。
+* [**shallow**](http://airbnb.io/enzyme/docs/api/shallow.html)：推荐的方式，浅渲染，只会渲染本地组件内容（只渲染不包含 children 的组件），引用的外部组件不会渲染，提供更好的隔离性。
+* [**render**](http://airbnb.io/enzyme/docs/api/render.html)：如果 shallow 不能满足，才会使用它，能够渲染所有的子组件。基于 Cheerio 来模拟 DOM 环境（Cheerio 是类似 JSDOM 的另一框架）。
+* [**mount**](http://airbnb.io/enzyme/docs/api/mount.html)：类似 render，会做全渲染，对测试生命周期非常有用，能够访问到组件的生命周期方法，比如 `componentDidUpdate` 等。一般用于集成测试。
 
 [Enzyme Selector](http://airbnb.io/enzyme/docs/api/selector.html)
 
@@ -171,8 +171,6 @@ Enzyme 提供 3 种不同的方式来测试组件：
 {% endhint %}
 
 ## 编写组件测试
-
-写组件测试的时候需要将 Enzyme 和 Jest 结合起来使用，两者是互补的，它们已经是 React 应用测试中大家公认的标准库。
 
 ### 测试 rendering
 
@@ -203,6 +201,8 @@ it('should render a grayish label', () => {
 });
 ```
 
+写组件测试的时候需要将 Enzyme 和 Jest 结合起来使用，两者是互补的，它们已经是 React 应用测试中大家公认的标准库。
+
 {% hint style="warning" %}
 **注意**：这种直接使用 `toMatchSnapshot()` 方法的测试比较笼统、简单粗暴，且没有针对性，只是比较方便，权衡使用。
 {% endhint %}
@@ -213,6 +213,10 @@ it('should render a grayish label', () => {
 
 {% hint style="warning" %}
 **注意**：快照测试抛错不过，不一定是写代码有问题，有可能组件加入了新属性等原因导致的，属于正常的，手动更新一下快照即可。
+{% endhint %}
+
+{% hint style="warning" %}
+注意：使用snapshot test后组件的测试覆盖率将达到100%
 {% endhint %}
 
 ### 测试 **props**

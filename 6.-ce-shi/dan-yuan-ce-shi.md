@@ -34,6 +34,10 @@ Jest 是 Facebook 开源的一个测试框架，相对其他测试框架，其�
 * **兼容性好**：兼容 Jasmine 框架语法，又新增了一些新的便捷功能。
 * **JSDOM**：不需要真实 DOM 环境执行，而是 JSDOM 模拟的 DOM。
 
+{% hint style="success" %}
+**推荐**：将jest config 放在项目根目录下，可以省去一些配置上的麻烦和某些配置问题导致覆盖率为0%的问题。
+{% endhint %}
+
 ## 测试覆盖率
 
 > 把测试覆盖作为质量目标没有任何意义，而我们应该把它作为一种发现未被测试覆盖的代码的手段。 ——[Martin Fowler](https://zh.wikipedia.org/wiki/马丁·福勒)
