@@ -216,7 +216,7 @@ it('should render a grayish label', () => {
 {% endhint %}
 
 {% hint style="warning" %}
-**注意**：使用snapshot test后组件的测试覆盖率将达到100%
+**注意**：使用snapshot test后组件的测试覆盖率将会大幅提高，部分会达到100%。
 {% endhint %}
 
 ### 测试 **props**
