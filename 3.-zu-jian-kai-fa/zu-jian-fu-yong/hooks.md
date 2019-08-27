@@ -132,3 +132,66 @@ function ExampleWithManyStates() {
 **强制**：React规定我们必须把hooks写在函数的最外层，不能写在`ifelse`等条件语句当中，来确保hooks的执行顺序一致。
 {% endhint %}
 
+### Effect Hooks <a id="articleHeader12"></a>
+
+我们在上一节的例子中增加一个新功能：
+
+```jsx
+import { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // 类似于componentDidMount 和 componentDidUpdate:
+  useEffect(() => {
+    // 更新文档的标题
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+我们对比着看一下，如果没有hooks，我们会怎么写？
+
+```jsx
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  componentDidMount() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+
+  componentDidUpdate() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+}
+```
+
+我们写的有状态组件，通常会产生很多的副作用（side effect），比如发起ajax请求获取数据，添加一些监听的注册和取消注册，手动修改dom等等。我们之前都把这些副作用的函数写在生命周期函数钩子里，比如`componentDidMount`，`componentDidUpdate`和`componentWillUnmount`。而现在的`useEffect`就相当与这些声明周期函数钩子的集合体。它以一抵三。
+
+同时，由于前文所说hooks可以反复多次使用，相互独立。所以我们合理的做法是，给每一个副作用一个单独的`useEffect`钩子。这样一来，这些副作用不再一股脑堆在生命周期钩子里，代码变得更加清晰。
+
